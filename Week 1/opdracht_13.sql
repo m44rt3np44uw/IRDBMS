@@ -6,7 +6,10 @@
   bevatten.
  */
 
-SELECT patient.patient_voornaam, bed.bed_nr, bed.bed_type_nr
+SELECT
+  patient.patient_voornaam,
+  bed.bed_nr,
+  bed.bed_type_nr
 FROM patient
-JOIN bed
-ON patient.patient_bed_nr = bed.bed_nr
+  JOIN bed
+    ON patient.patient_bed_nr = bed.bed_nr

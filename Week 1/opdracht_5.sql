@@ -7,5 +7,7 @@
   query. Geef de kolommen zinvolle namen.
  */
 
-SELECT AVG(pers_salaris) AS gemiddeld_salaris, SUM(pers_salaris) AS totaal_salaris
+SELECT
+  AVG(pers_salaris) AS gemiddeld_salaris,
+  SUM(pers_salaris) AS totaal_salaris
 FROM personeel;

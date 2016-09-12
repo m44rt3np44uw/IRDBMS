@@ -6,6 +6,8 @@
   verrichtingen.
  */
 
-SELECT verrichting_cat_nr, COUNT(verrichting_cat_nr)
+SELECT
+  verrichting_cat_nr,
+  COUNT(verrichting_cat_nr)
 FROM verrichting
 GROUP BY verrichting_cat_nr;

@@ -5,6 +5,9 @@
   resultatentabel moet de achternaam, voornaam en postcode tonen.
  */
 
-SELECT patient_achternaam, patient_voornaam, patient_postcode
+SELECT
+  patient_achternaam,
+  patient_voornaam,
+  patient_postcode
 FROM patient
 WHERE patient_postcode = '6202 JK';

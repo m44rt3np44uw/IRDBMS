@@ -7,4 +7,4 @@
 
 SELECT *
 FROM patient
-WHERE lst_bijwerkdat < now() - '5 years'::INTERVAL;
+WHERE lst_bijwerkdat < now() - '5 years' :: INTERVAL;

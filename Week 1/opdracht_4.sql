@@ -7,7 +7,10 @@
   pn_notitie_commentaar van de tabel patient_notitie bevatten.
  */
 
-SELECT patient.patient_nr, patient.patient_achternaam, patient_notitie.pn_notitie_commentaar
+SELECT
+  patient.patient_nr,
+  patient.patient_achternaam,
+  patient_notitie.pn_notitie_commentaar
 FROM patient
-JOIN patient_notitie
-ON patient.patient_nr = patient_notitie.pn_patient_nr;
+  JOIN patient_notitie
+    ON patient.patient_nr = patient_notitie.pn_patient_nr;

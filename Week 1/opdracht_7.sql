@@ -7,7 +7,7 @@
 
 CREATE TABLE personeel2
 (
-  pers_nr             CHAR(5)
+  pers_nr               CHAR(5)
     CONSTRAINT pk_personeel_2 PRIMARY KEY,
 
   pers_sofi_nr          CHAR(9)
@@ -23,7 +23,7 @@ CREATE TABLE personeel2
 
   pers_afd_toegewezen   CHAR(5)
     CONSTRAINT fk_pers_afd_toegewezen_2
-      REFERENCES zh_afdeling(afdeling_nr),
+    REFERENCES zh_afdeling (afdeling_nr),
 
   pers_kantoor_locatie  VARCHAR(10),
 
@@ -32,15 +32,15 @@ CREATE TABLE personeel2
   pers_ziekenhuis_titel VARCHAR(50)
     CONSTRAINT nn_pers_ziekenhuis_titel_2 NOT NULL,
 
-  pers_tel_werk           CHAR(10),
+  pers_tel_werk         CHAR(10),
 
-  pers_tel_doorkies       VARCHAR(4),
+  pers_tel_doorkies     VARCHAR(4),
 
-  pers_reg_nr             VARCHAR(20),
+  pers_reg_nr           VARCHAR(20),
 
-  pers_salaris            INTEGER,
+  pers_salaris          INTEGER,
 
-  pers_tarief             NUMERIC(5,2),
+  pers_tarief           NUMERIC(5, 2),
 
-  lst_bijwerkdat          DATE
+  lst_bijwerkdat        DATE
 )
