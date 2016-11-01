@@ -7,7 +7,19 @@
   pn_notitie_commentaar van de tabel patient_notitie bevatten.
  */
 
-SELECT patient.patient_nr, patient.patient_achternaam, patient_notitie.pn_notitie_commentaar
+-- EIGEN ANTWOORD
+SELECT
+  patient.patient_nr,
+  patient.patient_achternaam,
+  patient_notitie.pn_notitie_commentaar
 FROM patient
-JOIN patient_notitie
-ON patient.patient_nr = patient_notitie.pn_patient_nr;
+  JOIN patient_notitie
+    ON patient.patient_nr = patient_notitie.pn_patient_nr;
+
+-- SCHOOL ANTWOORD
+SELECT
+  p.patient_nr,
+  p.patient_achternaam,
+  pn.pn_notitie_commentaar
+FROM patient p INNER JOIN patient_notitie pn ON
+                                               p.patient_nr = pn.pn_patient_nr;
