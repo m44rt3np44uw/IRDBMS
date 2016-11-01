@@ -7,4 +7,4 @@
 
 SELECT *
 FROM patient
-WHERE patient_bed_nr ISNULL
+WHERE patient_bed_nr ISNULL;

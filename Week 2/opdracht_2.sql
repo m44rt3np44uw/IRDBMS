@@ -5,6 +5,7 @@
   het kamernummer getoond wordt. Toon ook de kameromschrijving.
  */
 
+-- EIGEN ANTWOORD
 SELECT
   patient.patient_achternaam,
   patient.patient_tussenvoegsel,
@@ -17,4 +18,17 @@ FROM patient
     ON patient.patient_bed_nr = bed.bed_nr
   JOIN kamer
     ON bed.bed_kamer_nr = kamer.kamer_nr
-ORDER BY patient.patient_achternaam
+ORDER BY patient.patient_achternaam;
+
+-- SCHOOL ANTWOORD
+SELECT
+  patient_voornaam,
+  patient_tussenvoegsel,
+  patient_achternaam,
+  bed_kamer_nr,
+  kamer_omschrijving
+FROM patient, bed, kamer
+WHERE
+  patient.patient_bed_nr = bed.bed_nr AND kamer.kamer_nr =
+                                          bed.bed_kamer_nr
+ORDER BY patient_achternaam;

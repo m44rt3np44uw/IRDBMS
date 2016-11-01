@@ -7,6 +7,7 @@
   alfabet.
  */
 
+-- EIGEN ANTWOORD
 SELECT
   COUNT(behandeling.behandeling_nr) AS behandeling_nr,
   verrichting.verrichting_omschrijving
@@ -15,4 +16,15 @@ FROM behandeling
     ON behandeling.behandeling_verrichting_nr = verrichting.verrichting_nr
 GROUP BY verrichting.verrichting_omschrijving
 HAVING COUNT(behandeling.behandeling_nr) > 1
-ORDER BY COUNT(behandeling.behandeling_nr) DESC
+ORDER BY COUNT(behandeling.behandeling_nr) DESC, verrichting.verrichting_omschrijving;
+
+-- SCHOOL ANTWOORD
+SELECT
+  verrichting_omschrijving,
+  count(b.behandeling_verrichting_nr)
+FROM behandeling b, verrichting v
+WHERE b.behandeling_verrichting_nr = v.verrichting_nr
+GROUP BY v.verrichting_omschrijving
+HAVING count(b.behandeling_verrichting_nr) > 1
+ORDER BY count(b.behandeling_verrichting_nr) DESC,
+  v.verrichting_omschrijving;

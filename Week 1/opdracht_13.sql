@@ -8,8 +8,10 @@
 
 SELECT
   patient.patient_voornaam,
+  patient.patient_tussenvoegsel,
+  patient.patient_achternaam,
   bed.bed_nr,
   bed.bed_type_nr
 FROM patient
   JOIN bed
-    ON patient.patient_bed_nr = bed.bed_nr
+    ON patient.patient_bed_nr = bed.bed_nr;
