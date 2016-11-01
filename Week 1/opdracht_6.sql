@@ -6,8 +6,18 @@
   verrichtingen.
  */
 
+-- EIGEN ANTWOORD
 SELECT
-  DISTINCT(verrichting_cat_nr),
+  DISTINCT
+  (verrichting_cat_nr),
   COUNT(verrichting_cat_nr)
 FROM verrichting
+GROUP BY verrichting_cat_nr;
+
+-- SCHOOL ANTWOORD
+SELECT DISTINCT
+  (verrichting_cat_nr),
+  COUNT(verrichting_cat_nr)
+FROM
+  verrichting
 GROUP BY verrichting_cat_nr;

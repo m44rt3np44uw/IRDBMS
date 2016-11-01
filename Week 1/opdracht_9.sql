@@ -8,6 +8,7 @@
   bed_nr.
  */
 
+-- EIGEN ANTWOORD
 CREATE TABLE patient_archief
 (
   patient_nr            CHAR(6)
@@ -37,4 +38,29 @@ CREATE TABLE patient_archief
   patient_tel_nr        CHAR(10),
 
   lst_bijwerkdat        DATE
-)
+);
+
+-- SCHOOL ANTWOORD
+CREATE TABLE patient_archief (
+  patient_nr            CHARACTER(6)          NOT NULL,
+  patient_sofi_nr       CHARACTER(9)          NOT NULL,
+  patient_achternaam    CHARACTER
+                        VARYING(50)           NOT NULL,
+  patient_voornaam      CHARACTER VARYING(50) NOT NULL,
+  patient_tussenvoegsel CHARACTER VARYING(50),
+  patient_adres         CHARACTER
+                        VARYING(50),
+  patient_plaats        CHARACTER VARYING(50),
+  patient_provincie
+                        CHARACTER(2),
+  patient_postcode      CHARACTER VARYING(7),
+  patient_geboortedatum DATE,
+  patient_tel_nr        CHARACTER(10),
+  lst_bijwerkdat
+                        DATE,
+  CONSTRAINT pk_patient_archief PRIMARY KEY (patient_nr)
+) WITH (
+OIDS = FALSE
+);
+ALTER TABLE patient_archief
+  OWNER TO postgres;
