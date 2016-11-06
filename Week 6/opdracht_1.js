@@ -1,0 +1,11 @@
+db.getCollection('IRDBMS').insert(
+
+    // Insert
+    {
+        "studentnummer": 1094220,
+        "naam": "Maarten Paauw",
+        "adres": "Straatnaam 12A",
+        "woonplaats": "Rijnsburg",
+        "e-mailadres": "s1094220@student.hsleiden.nl"
+    }
+);
